@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('v2');
             $table->string('v3');
             $table->string('v4');
-            $table->string('helyes')->default('v1');
+            $table->integer('helyes')->default('0');
             $table->foreignId('KategoriaId')->references('id')->on('kategorias');
             $table->timestamps();
         });
