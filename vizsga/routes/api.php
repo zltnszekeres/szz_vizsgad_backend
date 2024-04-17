@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/tesztek', [TesztController::class, 'index']);
-
+Route::get('teszt/{id}', [TesztController::class, 'show']);
 
 
