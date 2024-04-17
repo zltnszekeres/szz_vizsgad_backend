@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\Kategoria;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,8 +15,20 @@ return new class extends Migration
             $table->id();
             $table->string('kategorianev');
             $table->timestamps();
+
+
         });
+        Kategoria::create([
+            'kategorianev'=> 'Történelem'
+        ]);
+        Kategoria::create([
+            'kategorianev'=> 'Környezetvédelem'
+        ]);
+       
     }
+    
+
+
 
     /**
      * Reverse the migrations.
